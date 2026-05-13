@@ -2,9 +2,9 @@ name: Angular_DockerImage
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 jobs:
   angular_deploy :
     runs-on: ubuntu-latest
