@@ -1,0 +1,31 @@
+<div class="home-grid">
+  
+  <div class="card">
+    <h3 class="card-title">Add a life goal</h3>
+    <p class="card-subtitle">Use this form below to add a new life goal</p>
+    
+    <div class="form-group">
+      <input 
+        type="text" 
+        [(ngModel)]="nuevaMetaTexto" 
+        placeholder="Ej. go to moon" 
+        class="input-meta" 
+      />
+      <button (click)="guardarMeta()" class="btn-add">add an item</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 class="card-title">Your goal list ({{ listaMetas.length }})</h3>
+    
+    <div class="meta-list">
+      <p *ngIf="listaMetas.length === 0" class="empty-message">No goals added yet. Start writing above!</p>
+      
+      <div *ngFor="let m of listaMetas" class="meta-item">
+        <button (click)="eliminarMeta(m.id)" class="btn-delete">delete</button>
+        <span class="meta-text">{{ m.meta }}</span>
+      </div>
+    </div>
+  </div>
+
+</div>

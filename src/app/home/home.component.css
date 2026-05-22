@@ -1,0 +1,120 @@
+/* Contenedor en malla de 2 columnas (responsivo) */
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .home-grid {
+    grid-template-columns: 1fr 1fr; /* Una columna para el form y otra para la lista */
+  }
+}
+
+/* Tarjetas (Cards) Blancas del Reto */
+.card {
+  background-color: #ffffff;
+  color: #333333;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+  color: #1a7bb0; /* Azul oscuro que combina con la barra */
+  font-weight: 600;
+}
+
+.card-subtitle {
+  color: #666666;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
+
+/* Estilos del Formulario */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-meta {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-meta:focus {
+  border-color: #2b9fd9;
+}
+
+.btn-add {
+  background-color: #2b9fd9;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: lowercase; /* Mantiene la estética del texto original */
+  transition: background-color 0.2s;
+}
+
+.btn-add:hover {
+  background-color: #1a7bb0;
+}
+
+/* Estilos del Listado */
+.meta-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.meta-item:last-child {
+  border-bottom: none;
+}
+
+.btn-delete {
+  background-color: #d9534f; /* Rojo sutil para destrucción */
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-transform: lowercase;
+  transition: background-color 0.2s;
+}
+
+.btn-delete:hover {
+  background-color: #c9302c;
+}
+
+.meta-text {
+  font-size: 1.1rem;
+  color: #444444;
+}
+
+.empty-message {
+  color: #999999;
+  font-style: italic;
+  text-align: center;
+  padding: 20px 0;
+}
